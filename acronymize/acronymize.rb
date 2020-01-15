@@ -1,31 +1,25 @@
-# define function
-# take a sentence
-# split sentence into array
-# find each word of the sentence
-# find the first letter of the word
-# join the letters together
-# return the fully capitalized acronym
 
-def acronym(sentence)
+
+
+
+
+
+# "Lots of Love" == "LOL"
+
+# define a method
+# turn string into array
+# use each to loop over it
+# capitalize first letter
+# keep only first letter
+# create final string
+
+def acronymize(string)
+  array = string.split(" ")
   acronym = ""
-  sent = sentence.split
-  sent.each do |word|
-    acronym << word[0]
-  end
-  acronym.upcase
+  array.each { |first_letter| acronym << first_letter[0] }
+  acronym
 end
 
-p acronym("what the fuck")
 
-def acronym(sentence)
-  sentence.split.map { |word| word[0].upcase}.join
-end
-
-def acronym_bleh(sentence)
-  sent = sentence.split.map do |word|
-    word[0].upcase
-  end
-  sent.join
-end
-
-p acronym_bleh("what the fuck")
+puts acronymize("lots of love") == "LOL"
+puts acronymize("lots of love")
