@@ -1,9 +1,3 @@
-
-
-
-
-
-
 # "Lots of Love" == "LOL"
 
 # define a method
