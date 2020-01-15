@@ -14,12 +14,25 @@
 # create final string
 
 def acronymize(string)
-  array = string.split(" ")
+  array = string.split
   acronym = ""
   array.each { |first_letter| acronym << first_letter[0] }
-  acronym
+  acronym.upcase
 end
 
+p acronymize("what the heck")
 
-puts acronymize("lots of love") == "LOL"
-puts acronymize("lots of love")
+def acronymize_refactor(sentence)
+  sent = sentence.split.map do |word|
+    word[0].upcase
+  end
+  sent.join
+end
+
+# p acronymize("what the heck")
+
+def acronymize_online(sentence)
+  sentence.split.map { |word| word[0].upcase }.join
+end
+
+print acronymize_online("laughing my flipping arse off")
